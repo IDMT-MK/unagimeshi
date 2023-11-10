@@ -292,12 +292,8 @@ $read_auth_pages = array(
 $edit_auth = 1;
 
 $edit_auth_pages = array(
-	// Regex		   Username
-	'#BarDiary#'		=> 'bar',
-	'#HogeHoge#'		=> 'hoge',
-	'#(NETABARE|NetaBare)#'	=> 'foo,bar,hoge',
-	// Regex  =>  Groupname or Username
-	'#.+#' => 'miko',
+	 // Regex  =>  Groupname or Username
+	 '#.+#' => 'unagimeshi',
 );
 
 /////////////////////////////////////////////////

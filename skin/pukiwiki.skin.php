@@ -75,22 +75,24 @@ header('Content-Type: text/html; charset=' . CONTENT_CHARSET);
 
   <title><?php echo $title ?> - <?php echo $page_title ?></title>
 
-  <script src="skin/js/jquery-3.2.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="skin/js/lightbox.min.js"></script>
   <!--
   <script src="skin/js/main.js" defer></script>
   <script src="skin/js/search2.js" defer></script>
   -->
-  <script src="skin/js/script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./skin/js/script.js"></script>
 
   <link rel="SHORTCUT ICON" href="<?php echo $image['favicon'] ?>" />
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   <link rel="stylesheet" href="skin/css/lightbox.min.css" media="screen" />
   <link rel="stylesheet" href="skin/css/pukiwiki.css" />
-  <link rel="stylesheet" href="skin/css/additional.css" />
 
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="skin/css/additional.css" />
   <?php echo $head_tag ?>
 
 </head>
@@ -99,17 +101,27 @@ header('Content-Type: text/html; charset=' . CONTENT_CHARSET);
 <?php echo $html_scripting_data ?>
 
   <header>
-    <h1 class="title"><?php echo $page ?></h1>
-    <a href="<?php echo $link['top'] ?>"><img id="logo" src="<?php echo IMAGE_DIR . $image['logo'] ?>" alt="[PukiWiki]" title="[PukiWiki]" /></a>
-		<div id="searchBox"><?php echo convert_html(get_source('SearchBox')) ?></div>
+    <div id="logo">
+      <div class="unagilogo"><img src="image/logo.PNG"></div>
+      <div class="title">
+        <h1>柳川うなぎめしマップ</h1>
+        <h2>柳川うなぎめし</h2>
+      </div>
+    </div>
   </header>
 
   <?php if ($menu !== FALSE) { ?>
 
     <ul class="slider">
-       <li class="slider-item slider-item01"></li>
-       <li class="slider-item slider-item02"></li>
-       <li class="slider-item slider-item03"></li>
+       <li class="slider-item">
+          <div class="slider-item01"><img src="./skin/images/img01.png"></div>
+       </li>
+       <li class="slider-item">
+          <div class="slider-item02"><img src="./skin/images/img02.png"></div>
+       </li>
+       <li class="slider-item">
+         <div class="slider-item03"><img src="./skin/images/img03.png"></div>
+       </li>
     </ul>
 
   <div id="readMode">
@@ -237,9 +249,7 @@ header('Content-Type: text/html; charset=' . CONTENT_CHARSET);
       Powered by PHP <?php echo PHP_VERSION ?>. HTML convert time: <?php echo elapsedtime() ?> sec.
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="script.js"></script>
+
   </footer>
 
 </body>

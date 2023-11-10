@@ -1,0 +1,11 @@
+$('.slider').slick();
+$(document).ready(function(){
+   $('.slider').bxSlider({
+      auto: true,
+      autoplaySpeed: 3000,
+      mode: 'fade',
+      speed: 3000,
+      pager: true,
+      captions: true
+   });
+});
